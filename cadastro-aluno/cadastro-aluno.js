@@ -17,7 +17,6 @@ const bairro = document.getElementById('bairro')
 const mensagem = document.getElementById('mensagem')
 const btnSalvar = document.getElementById('btnSalvar')
 
-// Busca automática de endereço pelo CEP (ViaCEP)
 cep.addEventListener('change', async () => {
     const cepDigitado = cep.value.replace(/\D/g, '')
 
@@ -42,7 +41,6 @@ cep.addEventListener('change', async () => {
 btnSalvar.addEventListener('click', () => {
     mensagem.textContent = ''
 
-    // Validação dos campos obrigatórios
     if (
         !nomeCompleto.value || nomeCompleto.value.length < 4 || nomeCompleto.value.length > 80 ||
         !genero.value ||
@@ -62,7 +60,6 @@ btnSalvar.addEventListener('click', () => {
         return
     }
 
-    // Validação da data de nascimento com moment.js
     const dataValida = moment(dataNascimento.value, 'DD/MM/YYYY', true)
     const dataMinima = moment('01/01/1900', 'DD/MM/YYYY')
     const hoje = moment()
@@ -73,7 +70,6 @@ btnSalvar.addEventListener('click', () => {
         return
     }
 
-    // Monta o objeto de endereço
     const endereco = {
         cep: cep.value,
         cidade: cidade.value,
@@ -84,7 +80,6 @@ btnSalvar.addEventListener('click', () => {
         bairro: bairro.value
     }
 
-    // Cria o objeto Aluno usando a classe (RF12)
     const novoAluno = new Aluno(
         nomeCompleto.value,
         genero.value,
@@ -95,9 +90,15 @@ btnSalvar.addEventListener('click', () => {
         endereco
     )
 
-    // Envia via cadastrarAluno (RF06)
-    cadastrarAluno(novoAluno)
+cadastrarAluno(novoAluno)
 
-    mensagem.textContent = 'Aluno cadastrado com sucesso!'
+.then((msg) => {
+    mensagem.textContent = msg
     mensagem.style.color = 'green'
+})
+
+.catch((erro) => {
+    mensagem.textContent = erro
+    mensagem.style.color = 'red'
+})
 })
