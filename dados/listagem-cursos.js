@@ -56,10 +56,3 @@ const cursos = [
     dataFim: "2026-10-23"
   }
 ];
-
-function listarCursos(usuario) {
-    const cursosFiltrados = cursos.filter((curso) => {
-        return curso.emailProfessor === usuario
-    })
-    return cursosFiltrados
-}
