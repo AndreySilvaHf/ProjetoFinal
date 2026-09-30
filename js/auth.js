@@ -1,0 +1,12 @@
+function login(usuario, senha) {
+    return new Promise((resolve, reject) => {
+        const usuarioEncontrado = usuarios.find ((usuarioDaLista) => {
+            return usuarioDaLista.email === usuario && usuarioDaLista.senha ===senha
+        })
+        if (usuarioEncontrado) {
+            resolve(usuarioEncontrado)
+        } else {
+            reject('Dados incorretos. Favor verificar e tentar novamente')
+        }
+    })
+}

@@ -1,7 +1,8 @@
-cabecalho()
-menu()
+criarCabecalho()
+criarMenu()
 
-const usuarioLogado = sessionStorage.getItem('usuarioLogado')
+const dadosUsuario = JSON.parse(sessionStorage.getItem('usuarioLogado'))
+const usuarioLogado = dadosUsuario.email
 const containerCursos = document.getElementById('cursos')
 
 listarCursos(usuarioLogado)

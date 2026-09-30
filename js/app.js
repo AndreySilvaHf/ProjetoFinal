@@ -1,16 +1,18 @@
-function cabecalho() {
+function criarCabecalho() {
     const container = document.getElementById('cabecalho')
 
     const titulo = document.createElement('h1')
     titulo.textContent = 'AVA-EDUCA+'
     container.appendChild(titulo)
 
+    const dadosUsuario = JSON.parse(sessionStorage.getItem('usuarioLogado'))
+
     const usuario = document.createElement('span')
-    usuario.textContent = sessionStorage.getItem('usuarioLogado')
+    usuario.textContent = dadosUsuario.nome
     container.appendChild(usuario)
 }
 
-function menu() {
+function criarMenu() {
     const container = document.getElementById('menu')
 
     const btnDashboard = document.createElement('button')

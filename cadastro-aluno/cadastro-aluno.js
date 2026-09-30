@@ -1,5 +1,5 @@
-cabecalho()
-menu()
+criarCabecalho()
+criarMenu()
 
 const nomeCompleto = document.getElementById('nomeCompleto')
 const genero = document.getElementById('genero')
