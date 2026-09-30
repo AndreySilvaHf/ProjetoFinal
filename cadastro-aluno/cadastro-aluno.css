@@ -1,0 +1,121 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    color: #2c3e50;
+}
+
+#cabecalho {
+    background-color: #2c6ecb;
+    color: white;
+    padding: 16px 24px;
+}
+
+#cabecalho h1 {
+    margin: 0 0 4px 0;
+    font-size: 22px;
+}
+
+#cabecalho span {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+#menu {
+    padding: 12px 24px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+#menu button {
+    background-color: #f0f4f9;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#menu button:hover:not(:disabled) {
+    background-color: #dde6f2;
+}
+
+#menu button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 32px;
+    margin: 24px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input, select {
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#btnSalvar {
+    background-color: #2c6ecb;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 16px;
+    font-size: 15px;
+}
+
+#btnSalvar:hover {
+    background-color: #1d4f99;
+}
+
+#mensagem {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+form {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+input, select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    #menu {
+        flex-direction: column;
+    }
+
+    #menu button {
+        width: 100%;
+    }
+
+    form {
+        width: 95%;
+    }
+}

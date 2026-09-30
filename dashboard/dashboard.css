@@ -1,0 +1,94 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    color: #2c3e50;
+}
+
+#cabecalho {
+    background-color: #2c6ecb;
+    color: white;
+    padding: 16px 24px;
+}
+
+#cabecalho h1 {
+    margin: 0 0 4px 0;
+    font-size: 22px;
+}
+
+#cabecalho span {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+#menu {
+    padding: 12px 24px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+#menu button {
+    background-color: #f0f4f9;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#menu button:hover:not(:disabled) {
+    background-color: #dde6f2;
+}
+
+#menu button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#cursos {
+    padding: 24px;
+}
+
+.card-curso {
+    background-color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-curso h3 {
+    margin-top: 0;
+    color: #2c6ecb;
+}
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#cursos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.card-curso {
+    flex: 1 1 250px;
+    max-width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    #menu {
+        flex-direction: column;
+    }
+
+    #menu button {
+        width: 100%;
+    }
+
+    .card-curso {
+        flex: 1 1 100%;
+    }
+}
