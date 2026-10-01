@@ -1,4 +1,4 @@
-class Aluno {
+export class Aluno {
     constructor(nomeCompleto, genero, dataNascimento, cpf, telefone, email, endereco) {
         this.nomeCompleto = nomeCompleto
         this.genero = genero

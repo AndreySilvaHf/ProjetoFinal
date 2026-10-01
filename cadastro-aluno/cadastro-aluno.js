@@ -1,3 +1,7 @@
+import { criarCabecalho, criarMenu } from '../js/app.js'
+import { Aluno } from '../js/Aluno.js'
+import { cadastrarAluno } from '../js/alunos.js'
+
 criarCabecalho()
 criarMenu()
 

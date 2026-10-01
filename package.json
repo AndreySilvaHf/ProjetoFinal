@@ -1,0 +1,10 @@
+{
+  "name": "ava-educa",
+  "version": "1.0.0",
+  "description": "Projeto AVA-EDUCA+ - Front-End T1",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}

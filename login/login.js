@@ -1,3 +1,5 @@
+import { login } from '../js/auth.js'
+
 const email = document.getElementById('email')
 const senha = document.getElementById('senha')
 const entrar = document.getElementById('entrar')
