@@ -1,4 +1,4 @@
-function criarCabecalho() {
+export function criarCabecalho() {
     const container = document.getElementById('cabecalho')
 
     const titulo = document.createElement('h1')
@@ -12,7 +12,7 @@ function criarCabecalho() {
     container.appendChild(usuario)
 }
 
-function criarMenu() {
+export function criarMenu() {
     const container = document.getElementById('menu')
 
     const btnDashboard = document.createElement('button')

@@ -1,4 +1,6 @@
-function login(usuario, senha) {
+import { usuarios } from '../dados/listagem-usuarios.js'
+
+export function login(usuario, senha) {
     return new Promise((resolve, reject) => {
         const usuarioEncontrado = usuarios.find ((usuarioDaLista) => {
             return usuarioDaLista.email === usuario && usuarioDaLista.senha ===senha

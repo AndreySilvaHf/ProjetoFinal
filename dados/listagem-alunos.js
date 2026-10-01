@@ -1,1 +1,1 @@
-const alunos = []
+export const alunos = []
