@@ -65,8 +65,8 @@ body {
 }
 
 #cursos {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 16px;
 }
 
@@ -88,7 +88,7 @@ body {
         width: 100%;
     }
 
-    .card-curso {
-        flex: 1 1 100%;
-    }
+    #cursos {
+    grid-template-columns: 1fr;
+}
 }
