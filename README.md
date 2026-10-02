@@ -57,10 +57,6 @@ ava-educa/
 │   ├── listagem-cursos.js
 │   └── listagem-alunos.js
 │
-├── assets/
-│   ├── images/
-│   └── icons/
-│
 ├── index.html
 ├── README.md
 └── package.json
