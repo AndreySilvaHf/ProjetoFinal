@@ -45,9 +45,6 @@ ava-educa/
 │   ├── cadastro-aluno.js
 │   └── cadastro-aluno.css
 │
-├── css/
-│   └── style.css
-│
 ├── js/
 │   ├── app.js
 │   ├── auth.js
