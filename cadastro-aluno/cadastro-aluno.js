@@ -45,12 +45,15 @@ cep.addEventListener('change', async () => {
 btnSalvar.addEventListener('click', () => {
     mensagem.textContent = ''
 
+    const cpfLimpo = cpf.value.replace(/\D/g, '')
+    const telefoneLimpo = telefone.value.replace(/\D/g, '')
+
     if (
         !nomeCompleto.value || nomeCompleto.value.length < 4 || nomeCompleto.value.length > 80 ||
         !genero.value ||
         !dataNascimento.value ||
-        !cpf.value ||
-        !telefone.value ||
+        !cpf.value || cpfLimpo.length !== 11 ||
+        !telefone.value || telefoneLimpo.length < 10 || telefoneLimpo.length > 11 ||
         !email.value ||
         !cep.value ||
         !cidade.value ||
@@ -88,21 +91,19 @@ btnSalvar.addEventListener('click', () => {
         nomeCompleto.value,
         genero.value,
         dataNascimento.value,
-        cpf.value,
-        telefone.value,
+        cpfLimpo,
+        telefoneLimpo,
         email.value,
         endereco
     )
 
-cadastrarAluno(novoAluno)
-
-.then((msg) => {
-    mensagem.textContent = msg
-    mensagem.style.color = 'green'
-})
-
-.catch((erro) => {
-    mensagem.textContent = erro
-    mensagem.style.color = 'red'
-})
+    cadastrarAluno(novoAluno)
+        .then((msg) => {
+            mensagem.textContent = msg
+            mensagem.style.color = 'green'
+        })
+        .catch((erro) => {
+            mensagem.textContent = erro
+            mensagem.style.color = 'red'
+        })
 })
